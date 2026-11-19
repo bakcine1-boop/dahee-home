@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>조다희 · 말씀을 다듬는 사람</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#f7f3ec; --paper:#fffdf9; --ink:#1d2433; --soft:#5d6577; --line:#e6dfd2;
+  --navy:#16213a; --gold:#b8935a; --gold-soft:#efe3cf; --peach:#f4d9c6; --sky:#dbe7f2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Pretendard,system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all}
+.serif{font-family:'Noto Serif KR',serif}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(247,243,236,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Noto Serif KR',serif;font-weight:700;letter-spacing:.02em}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:26px;list-style:none;font-size:14px;color:var(--soft)}
+nav ul a{text-decoration:none}
+nav ul a:hover{color:var(--ink)}
+.editbtn{font:600 13px Pretendard;border:1px solid var(--ink);background:transparent;border-radius:999px;padding:7px 14px;cursor:pointer}
+.editbtn.on{background:var(--ink);color:var(--paper)}
+
+/* hero */
+.hero{padding:96px 0 80px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.24em;color:var(--gold);font-weight:700;text-transform:uppercase}
+.hero h1{font-family:'Noto Serif KR',serif;font-size:clamp(36px,5vw,60px);line-height:1.18;font-weight:700;margin:18px 0 22px;letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:18px;color:var(--soft);max-width:30em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chip{font-size:13px;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 14px;color:var(--soft)}
+.portrait{aspect-ratio:4/5;border-radius:28px;background:linear-gradient(160deg,var(--gold-soft),var(--peach));position:relative;overflow:hidden;box-shadow:0 30px 60px -30px rgba(22,33,58,.35)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#8a6d45;font-size:14px;gap:6px;padding:20px}
+.ph b{font-family:'Noto Serif KR',serif;font-size:72px;line-height:1;color:rgba(138,109,69,.35)}
+.portrait .tag{position:absolute;left:18px;bottom:18px;background:rgba(255,253,249,.9);border-radius:14px;padding:10px 14px;font-size:13px;line-height:1.45}
+.portrait .tag strong{display:block;font-size:14px}
+
+/* sections */
+section{padding:88px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:40px}
+.sec-head .num{font-family:'Noto Serif KR',serif;color:var(--gold);font-size:15px}
+.sec-head h2{font-family:'Noto Serif KR',serif;font-size:clamp(28px,3.4vw,38px);font-weight:700;letter-spacing:-.01em}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px}
+.card .k{font-size:12px;letter-spacing:.18em;color:var(--gold);font-weight:700}
+.card h3{font-family:'Noto Serif KR',serif;font-size:21px;margin:10px 0 8px}
+.card p{color:var(--soft);font-size:15px}
+
+/* process timeline */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:36px;counter-reset:s}
+.flow div{position:relative;padding:22px 16px 0 0;border-top:2px solid var(--ink);font-size:14px;color:var(--soft)}
+.flow div::before{counter-increment:s;content:"0" counter(s);position:absolute;top:-13px;left:0;background:var(--ivory);padding-right:8px;font:700 12px Pretendard;color:var(--ink)}
+.flow b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+
+/* mom section */
+.mom{background:var(--navy);color:#eef1f7;border-top:none}
+.mom .sec-head h2{color:#fff}
+.mom .wrap{position:relative}
+.momgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.quote{font-family:'Noto Serif KR',serif;font-size:clamp(22px,2.6vw,30px);line-height:1.6}
+.quote small{display:block;font-family:Pretendard;font-size:14px;color:#a9b2c6;margin-top:18px}
+.kidframe{background:#fffdf9;border-radius:26px;padding:22px;color:var(--ink);transform:rotate(-1.5deg);box-shadow:0 30px 60px -25px rgba(0,0,0,.5)}
+.kidframe .art{aspect-ratio:4/3;border-radius:16px;background:
+  radial-gradient(circle at 78% 24%,#ffd36b 0 34px,transparent 35px),
+  linear-gradient(#dbe7f2 0 62%,#cfe3c2 62%);position:relative;overflow:hidden}
+.kidframe .art img{width:100%;height:100%;object-fit:cover}
+.kidframe .art .house{position:absolute;left:18%;bottom:24%;width:90px;height:70px;background:#f4b9a0;border-radius:6px}
+.kidframe .art .house::before{content:"";position:absolute;left:-12px;top:-46px;border:57px solid transparent;border-bottom:46px solid #c9705a;border-top:0}
+.kidframe .art .cross{position:absolute;left:calc(18% + 40px);bottom:calc(24% + 118px);width:10px;height:30px;background:#7a5a3a}
+.kidframe .art .cross::after{content:"";position:absolute;left:-8px;top:8px;width:26px;height:8px;background:#7a5a3a}
+.kidframe .cap{font-size:14px;margin-top:14px;display:flex;justify-content:space-between;color:var(--soft)}
+.age{display:inline-flex;align-items:center;gap:10px;margin-top:26px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:8px 16px;font-size:14px}
+.age i{font-style:normal;font-weight:800;color:#ffd36b;font-size:18px}
+
+/* works */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.work{background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.work .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#1d2433,#3a4663);position:relative}
+.work .thumb::after{content:"▶";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.75);font-size:26px}
+.work .body{padding:18px 20px}
+.work .body b{display:block;font-size:16px}
+.work .body span{font-size:13px;color:var(--soft)}
+
+/* notes */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.note{background:var(--paper);border-radius:20px;padding:26px;border:1px solid var(--line);position:relative}
+.note::before{content:"“";font-family:'Noto Serif KR',serif;font-size:56px;line-height:1;color:var(--gold);position:absolute;top:14px;right:22px;opacity:.5}
+.note p{font-size:15px;margin-bottom:14px}
+.note span{font-size:13px;color:var(--soft)}
+
+footer{padding:56px 0 70px;border-top:1px solid var(--line);font-size:13px;color:var(--soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* placeholders + edit mode */
+.fill{background:linear-gradient(transparent 62%,rgba(184,147,90,.22) 62%);border-radius:2px}
+body.editing [data-edit]{outline:1.5px dashed var(--gold);outline-offset:4px;border-radius:6px;cursor:text}
+body.editing [data-photo]{cursor:pointer}
+body.editing [data-photo]::after{content:"사진 바꾸기";position:absolute;top:14px;right:14px;background:var(--ink);color:#fff;font-size:12px;padding:5px 10px;border-radius:999px;z-index:3}
+.banner{display:none;position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:13px;padding:10px 18px;border-radius:999px;z-index:30;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+body.editing .banner{display:block}
+
+.reveal{opacity:0;transform:translateY(18px);transition:all .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:860px){
+  nav ul{display:none}
+  .hero{padding:56px 0}
+  .hero .wrap,.momgrid{grid-template-columns:1fr;gap:36px}
+  .grid3,.works,.notes{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr;gap:18px}
+  .flow div{border-top:none;border-left:2px solid var(--ink);padding:0 0 0 18px}
+  .flow div::before{top:-2px;left:-14px;padding:0 0 4px}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">Dahee<span>.</span></div>
+    <ul>
+      <li><a href="#work">하는 일</a></li>
+      <li><a href="#mom">엄마의 시간</a></li>
+      <li><a href="#portfolio">만든 영상</a></li>
+      <li><a href="#notes">동료의 한마디</a></li>
+    </ul>
+    <button class="editbtn" id="editbtn">편집 모드</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">CTS기독교TV · Sermon Editor</div>
+      <h1>말씀이 <em>또렷하게</em><br>들리도록,<br>오늘도 다듬습니다.</h1>
+      <p class="lead" data-edit="lead">한 편의 설교가 화면 너머 성도에게 닿기까지. 목사님의 숨결은 살리고 군더더기는 덜어내는 일을 합니다. 퇴근하면 네 살 아이의 엄마로 돌아갑니다.</p>
+      <div class="chips">
+        <span class="chip">조다희</span>
+        <span class="chip">CTS 설교 편집</span>
+        <span class="chip">네 살 아이 엄마</span>
+        <span class="chip" data-edit="chip4">#취미를_적어주세요</span>
+      </div>
+    </div>
+    <div class="portrait reveal" data-photo="portrait">
+      <div class="ph"><b>희</b>대표 사진을 넣어 주세요<br><small>편집 모드 → 사진 클릭</small></div>
+      <div class="tag"><strong>조다희</strong><span data-edit="tagline">CTS기독교TV</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="num">01</span><h2>하는 일</h2></div>
+    <div class="grid3">
+      <div class="card reveal"><div class="k">LISTEN</div><h3>먼저 듣습니다</h3><p data-edit="w1">편집은 자르기 전에 끝까지 듣는 일에서 시작합니다. 설교의 흐름과 강조점을 먼저 붙잡습니다.</p></div>
+      <div class="card reveal"><div class="k">REFINE</div><h3>덜어내고 다듬습니다</h3><p data-edit="w2">말씀의 결은 지키고, 시청을 방해하는 부분만 조용히 정리합니다. 화면과 소리를 깨끗하게 맞춥니다.</p></div>
+      <div class="card reveal"><div class="k">DELIVER</div><h3>제때 전합니다</h3><p data-edit="w3">방송 편성과 온라인 공개 일정에 맞춰, 매주 빠짐없이 말씀이 송출되도록 챙깁니다.</p></div>
+    </div>
+    <div class="flow reveal">
+      <div><b>원본 확인</b>예배 실황·촬영본</div>
+      <div><b>구간 선정</b>설교 시작과 끝</div>
+      <div><b>정리</b>컷·화면·음향</div>
+      <div><b>검수</b>자막·방송 기준</div>
+      <div><b>송출</b>방송·유튜브</div>
+    </div>
+  </div>
+</section>
+
+<section id="mom" class="mom">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="num">02</span><h2>엄마의 시간</h2></div>
+    <div class="momgrid">
+      <div class="reveal">
+        <p class="quote" data-edit="momquote">“편집실에서는 남의 말을 다듬고,<br>집에 가면 아이의 서툰 말에<br>귀를 기울입니다.”</p>
+        <p class="quote"><small data-edit="momsign">— 조다희 (본인 문장으로 바꿔 주세요)</small></p>
+        <div class="age"><span>우리 집 막내</span><i>4살</i><span data-edit="kidname">아이 애칭</span></div>
+      </div>
+      <div class="kidframe reveal">
+        <div class="art" data-photo="kidart" style="position:relative">
+          <div class="house"></div><div class="cross"></div>
+        </div>
+        <div class="cap"><span data-edit="artcap">네 살 화가의 첫 작품 자리</span><span>2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="num">03</span><h2>만든 영상</h2></div>
+    <div class="works">
+      <div class="work reveal"><div class="thumb"></div><div class="body"><b data-edit="p1">작업한 설교 영상 제목</b><span data-edit="p1s">교회 · 방송일</span></div></div>
+      <div class="work reveal"><div class="thumb"></div><div class="body"><b data-edit="p2">작업한 설교 영상 제목</b><span data-edit="p2s">교회 · 방송일</span></div></div>
+      <div class="work reveal"><div class="thumb"></div><div class="body"><b data-edit="p3">작업한 설교 영상 제목</b><span data-edit="p3s">교회 · 방송일</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="num">04</span><h2>동료의 한마디</h2></div>
+    <div class="notes">
+      <div class="note reveal"><p data-edit="n1">함께 일하며 느낀 점을 적어 주세요.</p><span data-edit="n1s">— 이름 · 부서</span></div>
+      <div class="note reveal"><p data-edit="n2">함께 일하며 느낀 점을 적어 주세요.</p><span data-edit="n2s">— 이름 · 부서</span></div>
+      <div class="note reveal"><p data-edit="n3">함께 일하며 느낀 점을 적어 주세요.</p><span data-edit="n3s">— 이름 · 부서</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 조다희 · CTS기독교TV</span>
+    <span>본인 확인 전 시안입니다. 아이 사진·실명은 공개 게시하지 않습니다.</span>
+  </div>
+</footer>
+
+<div class="banner">편집 모드: 점선 글자를 눌러 고치고, 사진 칸을 눌러 사진을 넣으세요. 이 브라우저에 자동 저장됩니다.</div>
+<input type="file" id="picker" accept="image/*" hidden>
+
+<script>
+const KEY='dahee-home-v1';
+const store=JSON.parse(localStorage.getItem(KEY)||'{}');
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(store))}catch(e){alert('사진 용량이 커서 저장하지 못했습니다. 더 작은 사진을 써 주세요.')}};
+document.querySelectorAll('[data-edit]').forEach(el=>{
+  const k=el.dataset.edit; if(store[k]) el.innerHTML=store[k];
+  el.addEventListener('input',()=>{store[k]=el.innerHTML;save()});
+});
+const setPhoto=(el,src)=>{el.querySelectorAll('img,.ph,.house,.cross').forEach(n=>n.remove());const i=new Image();i.src=src;i.alt='';el.prepend(i)};
+document.querySelectorAll('[data-photo]').forEach(el=>{
+  const k='photo_'+el.dataset.photo; if(store[k]) setPhoto(el,store[k]);
+  el.addEventListener('click',()=>{ if(!document.body.classList.contains('editing'))return; picker.dataset.target=el.dataset.photo; picker.click(); });
+});
+picker.addEventListener('change',()=>{
+  const f=picker.files[0]; if(!f) return;
+  const img=new Image(); const url=URL.createObjectURL(f);
+  img.onload=()=>{const c=document.createElement('canvas');const s=Math.min(1,1200/Math.max(img.width,img.height));c.width=img.width*s;c.height=img.height*s;c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+    const d=c.toDataURL('image/jpeg',.82);const el=document.querySelector('[data-photo="'+picker.dataset.target+'"]');setPhoto(el,d);store['photo_'+picker.dataset.target]=d;save();picker.value='';};
+  img.src=url;
+});
+editbtn.addEventListener('click',()=>{
+  const on=document.body.classList.toggle('editing'); editbtn.classList.toggle('on',on); editbtn.textContent=on?'편집 끝':'편집 모드';
+  document.querySelectorAll('[data-edit]').forEach(el=>el.contentEditable=on);
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
